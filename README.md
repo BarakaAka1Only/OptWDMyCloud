@@ -1,16 +1,13 @@
-# OptWDMyCloud
-Optware installer for WD My Cloud / Mirror
+**IPKG ON WD MY CLOUD / MIRROR INSTALL**
 
-[B]IPKG ON WD MY CLOUD / MIRROR INSTALL[/B]
-
-[I][B]Note: it maybe a lot to read but it is worth it in the end ;) [/B][/I]
+***Note: it maybe a lot to read but it is worth it in the end ;) ***
 
 What is IPKG?
 
 IPKG also known as Optware is a lightweight package management system designed for embedded devices that resembles Debian's dpkg.
 
 
-[B]First thing first here is what you will need:[/B]
+**First thing first here is what you will need:**
 
 1. A USB stick i recommend a 8GB but if you have something around 2GB and above you should be fine
 2. An active internet connection
@@ -19,9 +16,9 @@ IPKG also known as Optware is a lightweight package management system designed f
 5. SSH Client (Putty if using Windows. Mac use Terminal same for linux users)
 6. Time
 
-[I][B]Note: i am doing this on a Macintosh but the setup / preparation is the same[/B][/I]
+***Note: i am doing this on a Macintosh but the setup / preparation is the same***
 
-[B]USB Preparation:[/B]
+**USB Preparation:**
 
 In order to run IPKG we need to format our usb to a "linux" partition via ext3
 
@@ -37,50 +34,50 @@ Open Virtual Box and make a new VM by clicking NEW
 
 Make the Type Linux, Version other 64bit and Name it whatever you want
 
-[IMG]http://i.imgur.com/H0cz18d.png[/IMG]
+<img src="http://i.imgur.com/H0cz18d.png" />
 
 Give it 1GB ram (1024MB), HDD 8GB create now with type VDI allocated, name the HDD whatever you want it should bring up the name you put in the first place in my case i called it "GParted"
 
-[IMG]http://i.imgur.com/wrogpmK.png[/IMG]
+<img src="http://i.imgur.com/wrogpmK.png" />
 
-[IMG]http://i.imgur.com/4vqeZtc.png[/IMG]
+<img src="http://i.imgur.com/4vqeZtc.png" />
 
-[IMG]http://i.imgur.com/W3DxFoq.png[/IMG]
+<img src="http://i.imgur.com/W3DxFoq.png" />
 
-[IMG]http://i.imgur.com/arMCiXK.png[/IMG]
+<img src="http://i.imgur.com/arMCiXK.png" />
 
-[IMG]http://i.imgur.com/Y1rik84.png[/IMG]
+<img src="http://i.imgur.com/Y1rik84.png" />
 
 Now your VM setup is almost complete, right click on the VM you just made and go to Settings and click on the Storage.
 Then click on the Empty disk and click on Live CD / DVD. 
 From there next to IDE Secondary click the disk icon and click on Choose a virtial CD/DVD disk file and when the window opens go to the location where
 the .iso is contained with GParted and hit okay
 
-[IMG]http://i.imgur.com/GAtC8rb.png[/IMG]
+<img src="http://i.imgur.com/GAtC8rb.png" />
 
-[IMG]http://i.imgur.com/xfQX8zp.png[/IMG]
+<img src="http://i.imgur.com/xfQX8zp.png" />
 
-[IMG]http://i.imgur.com/kKKXGSj.png[/IMG]
+<img src="http://i.imgur.com/kKKXGSj.png" />
 
-[IMG]http://i.imgur.com/M7zFgDq.png[/IMG]
+<img src="http://i.imgur.com/M7zFgDq.png" />
 
 
 Now start the VM and choose the first option
 
-[IMG]http://i.imgur.com/yYHgoS6.png[/IMG]
+<img src="http://i.imgur.com/yYHgoS6.png" />
 
 Once GParted loads, select your language. Sit back and wait for it to load.
 
 Hit enter on:
-[IMG]http://i.imgur.com/friy959.png[/IMG]
+<img src="http://i.imgur.com/friy959.png" />
 
 Type 33 and press enter
 
-[IMG]http://i.imgur.com/o18WaKU.png[/IMG]
+<img src="http://i.imgur.com/o18WaKU.png" />
 
 Then enter 0 and preas enter for it to start up
 
-[IMG]http://i.imgur.com/t5ZSqhZ.png[/IMG]
+<img src="http://i.imgur.com/t5ZSqhZ.png" />
 
 Your USB should be plugged in, on the menu outside the VM click Devices then USB Devices and choose your usb drive that you are going to format
 
@@ -92,23 +89,23 @@ Right-Click the drive icon and select "Unmount."
 
 Now you will need to prepare the usb drive and format/partition it. The following images illustrate the procedure (provided by DDWRT)
 
-[I][B]NOTE: JFFS IS NOT IMPORTANT ONLY DATA, OPTWARE AND SWAP ARE SO SKIP MAKING A JFFS PARTITION[/B][/I]
+***NOTE: JFFS IS NOT IMPORTANT ONLY DATA, OPTWARE AND SWAP ARE SO SKIP MAKING A JFFS PARTITION***
 
 Click Device and select Create Partition Table
 
-[IMG]http://i.imgur.com/RGgyAt4.jpg[/IMG]
+<img src="http://i.imgur.com/RGgyAt4.jpg" />
 
 Right click the "Unallocated Space and select New. Continue this procedure for each Partition you create
 
-[IMG]http://i.imgur.com/hbGg0RG.jpg[/IMG]
+<img src="http://i.imgur.com/hbGg0RG.jpg" />
 
-[IMG]http://i.imgur.com/rUJQ8k5.jpg[/IMG] 
+<img src="http://i.imgur.com/rUJQ8k5.jpg" /> 
 
 The partition size value for the following Data partition should be left alone, as this is the remaining space on the disk:
 
-[IMG]http://i.imgur.com/1V5g73D.jpg[/IMG] 
-[IMG]http://i.imgur.com/Vubvhjt.jpg[/IMG] 
-[IMG]http://i.imgur.com/nVeUDU0.jpg[/IMG] 
+<img src="http://i.imgur.com/1V5g73D.jpg" /> 
+<img src="http://i.imgur.com/Vubvhjt.jpg" /> 
+<img src="http://i.imgur.com/nVeUDU0.jpg" /> 
 
 You're finished! Now all that's left to do is plug the usb drive into your WD My Cloud / Mirror NAS.
 
@@ -120,7 +117,7 @@ If you haven't enabled SSH and configured it, go to your WD Dashboard, login and
 From there you should see a configure link next to it, click it and type in a password you want
 
 
-[IMG]http://i.imgur.com/CLgQ59l.png[/IMG]
+<img src="http://i.imgur.com/CLgQ59l.png" />
 
 Now to install OPTWARE with a script i wrote for WD My Cloud / Mirror Users
 
@@ -133,7 +130,7 @@ type
 `wget https://raw.githubusercontent.com/BarakaAka1Only/OptWDMyCloud/master/My%20Cloud%20Mirror/Optware/optware-install.sh --no-check-certificate`
 
 
-[IMG]http://i.imgur.com/thEAw5z.png[/IMG]
+<img src="http://i.imgur.com/thEAw5z.png" />
 
 Make permissions
 
@@ -160,7 +157,7 @@ then run
 
 `./optware-install.sh`
 
-[IMG]http://i.imgur.com/pxHDfgr.png[/IMG]
+<img src="http://i.imgur.com/pxHDfgr.png" />
 
 if you type in ipkg you will notice that it is not found we have to export the bin paths from /opt with this command
 
@@ -168,7 +165,7 @@ if you type in ipkg you will notice that it is not found we have to export the b
 
 now type `ipkg` and you should see all the commands
 
-[IMG]http://i.imgur.com/NYLoQ7n.png[/IMG]
+<img src="http://i.imgur.com/NYLoQ7n.png" />
 
 To install and run PlexPy
 
@@ -176,7 +173,7 @@ Update ipkg with command
 
 `ipkg update`
 
-[IMG]http://i.imgur.com/73OBSYH.png[/IMG]
+<img src="http://i.imgur.com/73OBSYH.png" />
 
 We need to install a few things git,which,python27
 
@@ -186,9 +183,9 @@ run command
 
 from this point it will install all the dependencies needed for what we are installing 
 
-[IMG]http://i.imgur.com/ccrTxRY.png[/IMG]
+<img src="http://i.imgur.com/ccrTxRY.png" />
 
-[IMG]http://i.imgur.com/plJ6mYw.png[/IMG]
+<img src="http://i.imgur.com/plJ6mYw.png" />
 
 cd into /opt with
 
@@ -198,7 +195,7 @@ and run
 
 `git clone https://github.com/drzoidberg33/plexpy.git`
 
-[IMG]http://i.imgur.com/uggpiiC.png[/IMG]
+<img src="http://i.imgur.com/uggpiiC.png" />
 
 now to run PlexPy
 
@@ -214,7 +211,7 @@ if you get the following error "Failed to start on port: 8181. Is something else
 you will have to edit two files __init__.py and config.py to change the port
 
 
-[IMG]http://i.imgur.com/tXGU2HF.png[/IMG]
+<img src="http://i.imgur.com/tXGU2HF.png" />
 
 to do this type in
 
@@ -225,12 +222,12 @@ then
 `vi __init__.py`
 
 
-[IMG]http://i.imgur.com/NzzqaBo.png[/IMG]
+<img src="http://i.imgur.com/NzzqaBo.png" />
 
 with your arrow keys, go down to line "97/721 13%" you will see CONFIG.HTTP_PORT = 8181
 
 
-[IMG]http://i.imgur.com/v1VwuLP.png[/IMG]
+<img src="http://i.imgur.com/v1VwuLP.png" />
 
 
 on your keyboard press "i" this will put it in "edit mode" 
@@ -238,14 +235,14 @@ now remove 8181 and type what ever four numbers you want
 like so
 
 
-[IMG]http://i.imgur.com/B6l6qHg.png[/IMG]
+<img src="http://i.imgur.com/B6l6qHg.png" />
 
 press esc on your keyboard to exit out of "edit mode"
 and press shift + : and type w  (this will write to the file)
 
 then press shift + : and type q and hit enter to exit
 
-[IMG]http://i.imgur.com/1AsroXo.png[/IMG]
+<img src="http://i.imgur.com/1AsroXo.png" />
 
 now do the same for the config.py file
 
@@ -255,7 +252,7 @@ with your arrow keys, go down to line "118/450 26%" you will see 'HTTP_PORT': (i
 
 change the 8181 to the same port you used in the __init__.py like so
 
-[IMG]http://i.imgur.com/geDwWMv.png[/IMG]
+<img src="http://i.imgur.com/geDwWMv.png" />
 
 press esc on your keyboard to exit out of "edit mode"
 and press shift + : and type w  (this will write to the file)
@@ -309,23 +306,22 @@ now run
 
 you should now see this output which ensures that PlexPy is running
 
-[IMG]http://i.imgur.com/vuf1jSC.png[/IMG]
+<img src="http://i.imgur.com/vuf1jSC.png" />
 
 Go to your browser and type your WD My Cloud / Mirror NAS's ip with your port 8181 (if you changed the port then use your custom port in my case port 5366) mine is http://192.168.1.120:5366
 
 you should see this
 
-[IMG]http://i.imgur.com/BlhVthM.png[/IMG]
+<img src="http://i.imgur.com/BlhVthM.png" />
 
 That is it, you now have PlexPy running on your WD My Cloud / Mirror NAS :)
 
-[B]Keep note that everytime you reboot you will have to mount / bind and export for /opt[/B]
+**Keep note that everytime you reboot you will have to mount / bind and export for /opt**
 
-[B]I haven't found a way to do this automatically but i will keep you guys updated once i do[/B]
+**I haven't found a way to do this automatically but i will keep you guys updated once i do**
 
-[B]it is because /etc/fstab isn't writable so an application should possibly fix this if i decide to make one[/B]
+**it is because /etc/fstab isn't writable so an application should possibly fix this if i decide to make one**
 
 Hope this helps enjoy!
 
 - Baraka
-
