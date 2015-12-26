@@ -1,6 +1,6 @@
 **IPKG ON WD MY CLOUD / MIRROR INSTALL**
 
-***Note: it maybe a lot to read but it is worth it in the end ;) ***
+***Note: it maybe a lot to read but it is worth it in the end ;)***
 
 What is IPKG?
 
