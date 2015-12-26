@@ -224,7 +224,7 @@ then
 
 <img src="http://i.imgur.com/NzzqaBo.png" />
 
-with your arrow keys, go down to line "97/721 13%" you will see CONFIG.HTTP_PORT = 8181
+with your arrow keys, go down to line "96/721 13%" you will see CONFIG.HTTP_PORT = 8181
 
 
 <img src="http://i.imgur.com/v1VwuLP.png" />
